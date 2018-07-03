@@ -1,0 +1,67 @@
+namespace graphpipe;
+
+enum Type:uint8 {
+    Null,
+    Uint8,
+    Int8,
+    Uint16,
+    Int16,
+    Uint32,
+    Int32,
+    Uint64,
+    Int64,
+    Float16,
+    Float32,
+    Float64,
+    String,
+}
+
+table Tensor {
+    type:Type;
+    shape:[int64];
+    data:[uint8];
+    string_val:[string];
+}
+
+union Req {InferRequest, MetadataRequest}
+
+table Request {
+    req:Req;
+}
+
+table InferRequest {
+    config:string;
+    input_names:[string];
+    input_tensors:[Tensor];
+    output_names:[string];
+}
+
+table Error {
+    code:int64;
+    message:string;
+}
+
+table InferResponse {
+    output_tensors:[Tensor];
+    errors:[Error];
+}
+
+table MetadataRequest {}
+
+table IOMetadata {
+    name:string; // required
+    description:string; // optional
+    shape:[int64]; // required
+    type:Type; // required
+}
+
+table MetadataResponse {
+    name:string;
+    version:string;
+    server:string;
+    description:string;
+    inputs:[IOMetadata]; // required
+    outputs:[IOMetadata]; // required
+}
+
+root_type Request;
