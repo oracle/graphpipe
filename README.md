@@ -21,6 +21,9 @@ Right now we've written a few libraries, and a couple implementations:
   - https://github.com/oracle/graphpipe-go/tree/master/cmd/graphpipe-tf is
     a Go implementation of a graphpipe server that makes TensorFlow queries
     against a provided model.
+  - https://github.com/oracle/graphpipe-go/tree/master/cmd/graphpipe-onnx is
+    a Go implementation of a graphpipe server that serves ONNX and caffe2
+    models.
   - https://github.com/oracle/graphpipe-py is the Python helper library.
   - https://github.com/oracle/graphpipe-tf-py is a Python implementation of
     a remote operation client for TensorFlow as well as some example server

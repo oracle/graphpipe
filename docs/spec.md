@@ -1,2 +1,121 @@
-spec it out!
-------------
+# Specification
+Our spec is provided in .fbs format:
+```
+namespace graphpipe;
+
+/*
+  Enumeration of supported types.
+*/
+enum Type:uint8 {
+    Null,
+    Uint8,
+    Int8,
+    Uint16,
+    Int16,
+    Uint32,
+    Int32,
+    Uint64,
+    Int64,
+    Float16,
+    Float32,
+    Float64,
+    String,
+}
+
+/*
+  Tensor definition.
+
+  type: defines what type of data this Tensor holds
+  shape: an array that describes the shape of the Tensor (like [10, 3, 224, 224])
+  data: stores the actual tensor data for all types but String
+  string_val: holds the data for tensors of type String
+*/
+table Tensor {
+    type:Type;
+    shape:[int64];
+    data:[uint8];
+    string_val:[string];
+}
+
+/*
+  Req definition, which containes either an InferRequest or a MetadataRequest
+*/
+union Req {InferRequest, MetadataRequest}
+
+table Request {
+    req:Req;
+}
+
+/*
+  Infer Request definition, which is used to request data from a remote model.
+  config: application-specific string used for request-specific model configuration.
+  input_names: A list of input names
+  input_tensors: A list of input tensors, associated with input_names
+  output_names: A list of outputs to return in response to the provided inputs
+*/
+table InferRequest {
+    config:string;
+    input_names:[string];
+    input_tensors:[Tensor];
+    output_names:[string];
+}
+
+/*
+  Error definition
+  code: integer representation of the error
+  message: Human-readable message description
+*/
+table Error {
+    code:int64;
+    message:string;
+}
+
+/*
+  InferResponse definition.
+  output_tensors: a list of output_tensors, in the order requested by InferRequest.output_names
+  errors: A list of errors that occurred during processing, if any
+*/
+table InferResponse {
+    output_tensors:[Tensor];
+    errors:[Error];
+}
+
+/*
+  MetadatRequest.  Used to request metadata about a graphpipe model server.
+*/
+table MetadataRequest {}
+
+/*
+  IOMetadata definition.  Provides info about inputs and outputs of a model.
+  name: name of the input/output
+  description: description of the input/output
+  shape: input or output shape
+  type: Type of the input/output
+*/
+table IOMetadata {
+    name:string; // required
+    description:string; // optional
+    shape:[int64]; // required
+    type:Type; // required
+}
+
+/*
+  MetadataResponse definition.  Describes characteristics of a graphpipe model server.
+  name: name of the model being served
+  version: the version of the server
+  server: Name of the server
+  description: description of the model being served
+  inputs: metadata about the model's inputs
+  outputs: metadata about the model's outputs
+*/
+table MetadataResponse {
+    name:string;
+    version:string;
+    server:string;
+    description:string;
+    inputs:[IOMetadata]; // required
+    outputs:[IOMetadata]; // required
+}
+
+root_type Request;
+```

@@ -4,7 +4,8 @@
 
 > Dead simple remote model serving
 
-* A simple, light-weight, framework-agnostic protocol for remote tensor communication
+* A simple, light-weight, framework-agnostic protocol for remote tensor
+  communication
 
 [GitHub](https://github.com/oracle/graphpipe/)
 [Get Started](#graphpipe)

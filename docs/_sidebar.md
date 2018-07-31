@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* [Home](/)
+* [Introduction](?id=graphpipe)
 
 * About
     * [Motivation](motivation.md)
@@ -9,6 +9,7 @@
 * Serving models
     * [Tensorflow](serving-tensorflow.md)
     * [ONNX](serving-onnx.md)
+    * [caffe2](serving-caffe2.md)
 
 * Using Graphipe Clients
     * [python](start-python.md)
@@ -21,5 +22,5 @@
 
 * Examples
     * [Remote Model Example](examples-remote.md)
-    * [Image Chain Example](examples-image-shain.md)
+    * [Image Chain Example](examples-image-chain.md)
 
