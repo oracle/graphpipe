@@ -28,7 +28,7 @@ show how to do this
 
 # Serving a local file-based model
 Models can be served from graphpipe-tf using either a local file or an
-unauthenticated http/https url.
+http/https url.
 
 
 ```
