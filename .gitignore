@@ -1,3 +1,5 @@
 go
 python
 cpp
+*.sw*
+.idea

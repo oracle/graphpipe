@@ -1,2 +1,0 @@
-Let's get motivated!
---------------------

@@ -1,2 +1,0 @@
-get started with python!
-------------------------
