@@ -9,6 +9,7 @@
 * Serving models
     * [Tensorflow](serving-tensorflow.md)
     * [ONNX/caffe2](serving-onnx.md)
+    * [python](serving-python.md)
 
 * Using Graphipe Clients
     * [python](start-python.md)
