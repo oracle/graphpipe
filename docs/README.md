@@ -9,15 +9,20 @@ vendor-specific model implementations.
 
 # Features
 * A simple, minimalist specification based on Flatbuffers
-* Dead-simple model servers for Tensorflow, Caffe2, and ONNX.  More
+* Simple, reference model servers for Tensorflow, Caffe2, and ONNX.  More
   implementations to come.
 * Efficient client implementations in Go, Python, and Java.
 
 # Getting Started
-To launch a simple graphpipe model server that is serving resnet18 on CPU:
+To launch a simple graphpipe model server that is serving squeezenet on CPU:
 
 ```
-  > docker run xyz
+  > docker run -it --rm \
+        -e https_proxy=${https_proxy} \
+        -p 9000:9000 \
+        graphpipe-tf:cpu \
+        --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb \
+        --listen=0.0.0.0:9000
 ```
 
 To see metadata on this model:
@@ -37,19 +42,7 @@ Finally, let's test an image against the model.
 
 After you download the image, run this script:
 
-```
-import numpy as np
-import requests
-
-from graphpipe import remote
-
-data = np.array(Image.open("mug.png"))
-data = data.reshape([1] + list(data.shape))
-data = np.rollaxis(data, 3, 1)  # channels first
-
-pred = remote.execute("http://127.0.0.1:10000", data)
-print("Predicted %d, expecting 504" % np.argmax(pred, axis=1))
-```
+[filename](_examples/_squeezenet_req.py ':include :type=code')
 
 # Getting Involved
 Interested in getting involved with GraphPipe?  See us on github...

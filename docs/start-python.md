@@ -38,7 +38,7 @@ Start this model, and then read on
 Now that you have an identity server, you can see what metadata is provided
 by the model by requesting model metadata.
 
-[filename](_media/metadata_example_1.py ':include :type=code')
+[filename](_examples/_metadata_1.py ':include :type=code')
 ```
 from graphpipe import remote 
 

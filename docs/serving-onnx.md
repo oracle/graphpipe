@@ -1,9 +1,11 @@
 # Serving ONNX and caffe2 models
-At present, the options for serving onnx and caffe2 models over the network are
-somewhat limited.  The primary open source server of which we are aware is 
-mxnet-model-server, which is a python+json inference server.
+At the time we started Graphpipe, the options for serving onnx and caffe2 models
+over the network were somewhat limited.  The primary open source server of which
+we are aware is mxnet-model-server, which is a python+json inference server.
 
-Here are some of the benefits of serving your onnx/caffe2 models with graphpipe:
+For our purposes, we wanted a server that was more flexible and higher
+performance.  Here are some of the benefits of serving your onnx/caffe2 models
+with graphpipe:
 
 * Efficient (and standardized) protocol - our Flatbuffers based protocol 
   is -much- faster than json, which makes it suitable for broader array of
@@ -21,7 +23,6 @@ the caffe2 library is used to perform this conversion.
 
 One thing to be aware of is that caffe2 models that are converted to 
 onnx end up with different input/output names.  We'll illustrate that below.
-
 
 # Getting your model into the proper format
 Our graphpipe-onnx server supports 2 model formats, each with slightly different
@@ -62,10 +63,21 @@ Models can be served from graphpipe-tf using either a local file or an
 http/https url.
 
 
+To launch a server your model from a remote url:
 ```
-  # Network example
-  ...TODO
+docker run -e "https_proxy=http://www-proxy-hqdc.us.oracle.com:80" \
+           -it graphpipe-onnx:gpu \
+           --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.onnx \
+           --value_inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs.json \
+           --listen=0.0.0.0:9000
+```
 
-  # Filesystem example
-  ...TODO
+If you want to use gpu, you will need an nvidia graphics card, as well as nvidia-docker
+```
+nvidia-docker run -e "https_proxy=http://www-proxy-hqdc.us.oracle.com:80" \
+                  -it graphpipe-onnx:gpu \
+                  --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.onnx \
+                  --value_inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs.json \
+                  --listen=0.0.0.0:9000 \
+                  --cuda # this flag enables cuda, but will cause a failure if it is not available
 ```
