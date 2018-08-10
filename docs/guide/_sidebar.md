@@ -1,5 +1,5 @@
 - **User Guide**
-  - [Overview](/guide/user-guide/motivation)
+  - [Overview](/guide/user-guide/overview)
   - [Quick Start](/guide/user-guide/quickstart)
   - [Specification](/guide/user-guide/spec)
   - [Get Involved](/guide/user-guide/get_involved)

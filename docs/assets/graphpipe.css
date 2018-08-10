@@ -138,7 +138,7 @@ body.no-sidebar .content {
 
 .github-corner svg {
     color: #FFFFFF !important;
-    fill: #2980B9 !important;
+    fill: #00748f !important;
 }
 /*====================================*/
 
@@ -151,20 +151,20 @@ body.no-sidebar .content {
 .md-button.md-focused:before,
 .md-button:active:before,
 .md-button:hover:before {
-    background-color: #2980B9;
+    background-color: #00748f;
     opacity: .12;
 }
 
 .md-tabs.md-theme-default .md-tabs-navigation .md-button.md-active {
-    color: #2980B9;
+    color: #00748f;
 }
 
 .md-tabs-indicator {
-    background-color: #2980B9;
+    background-color: #00748f;
 }
 
 .md-ripple .md-ripple-wave {
-    background-color: #2980B9;
+    background-color: #00748f;
 }
 
 /* Code Blocks */
@@ -265,14 +265,14 @@ blockquote:before {
 
 /*---[ Attributes ]-------------------*/
 code .token.annotation {
-    color: #2980B9;
+    color: #00748f;
 }
 
 .transform-arrow {
     display: block;
     width: 1em;
     margin: -0.3em auto;
-    color: #2980B9;
+    color: #00748f;
 }
 /*====================================*/
 
@@ -295,7 +295,7 @@ code .token.annotation {
 
 .api-container h2 a span:before {
     content: "#";
-    color: #2980B9;
+    color: #00748f;
     position: absolute;
     left: 1em;
     margin-top: 0.25em;

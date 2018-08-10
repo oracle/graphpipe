@@ -1,5 +1,4 @@
-# Motivation
-
+# Overview
 
 In the process of our work deploying machine learning models, we ran into
 several issues:
@@ -19,6 +18,10 @@ several issues:
   for front-end clients to talk to back-end machine-learning models,
   irrespective of model implementation, is important.
 
+The current state of the world looks like the following:
+
+![image](_media/gparch.001.jpeg)
+
 Thus GraphPipe was born.  In the code that we are releasing we provide:
 
 * A Standard Flatbuffers-based protocol for client-server Tensor communications
@@ -26,3 +29,6 @@ Thus GraphPipe was born.  In the code that we are releasing we provide:
 * Dead-simple efficient model servers written in Go for serving Tensorflow,
   Caffe2, and ONNX models.  More implementations to come.
 
+Now our world looks like this:
+
+![image](_media/gparch.002.jpeg)
