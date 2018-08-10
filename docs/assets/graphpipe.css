@@ -1,0 +1,478 @@
+/*---[ Common ]-----------------------*/
+.indent {
+    margin-top: -0.8em;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid #ededed;
+}
+/*====================================*/
+
+/*---[ Header & Footer ]--------------*/
+#footer {
+    color: #B2B3BA;
+    line-height: 1.7em;
+    margin-top: 2em;
+}
+
+#footer > hr {
+    margin-bottom: 0.5em;
+}
+
+#footer a {
+    color: #B2B3BA;
+    font-weight: 400;
+}
+
+#footer .docsify-text {
+    font-weight: 600;
+}
+
+#footer .heart {
+    color: #F99F9F;
+}
+
+#main {
+    padding-top: 50px !important;
+}
+
+.markdown-section h1:not(:first-of-type) {
+    margin-top: 1em;
+}
+
+a:not(.md-button):hover {
+    text-decoration-color: #F7D096;
+}
+/*====================================*/
+
+
+/*---[ Navbar ]----------------------*/
+.app-nav {
+    margin-right: 100px;
+}
+
+.app-nav .arrow {
+    color: #CFD3D9;
+    margin-left: 3px;
+}
+
+.app-nav > ul {
+    padding-left: 0px !important;
+}
+
+.app-nav > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.app-nav > ul > li > p > a {
+    font-size: 15px;
+}
+
+.app-nav a:hover {
+    text-decoration: none !important;
+}
+/*====================================*/
+
+
+/*---[ Sidebar ]----------------------*/
+/*  |---[ Reorder sidebar ]-----------*/
+.search {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    border-top: 1px solid #EEEEEE;
+    z-index: 10;
+    background-color: #FFFFFF;
+}
+
+.sidebar {
+    overflow: hidden;
+}
+
+.sidebar > h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar-nav {
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    /* Make only the nav scrollable */
+    overflow-y: auto;
+    height: calc(100% - 168px); /* top (130px) + toggle (38px) */
+    box-sizing: content-box;
+    padding-right: 17px;
+}
+/*  |=================================*/
+
+.sidebar > h1 > a.app-name-link {
+    color: #2B7FB9;
+}
+
+.app-sub-sidebar li:before {
+    display: none;
+}
+
+body.no-sidebar .sidebar,
+body.no-sidebar .sidebar-toggle {
+    display: none !important;
+}
+
+body.no-sidebar .content {
+    left: 0px !important;
+}
+
+.github-corner {
+    display: block !important;
+    border-bottom: 0 !important;
+    position: fixed !important;
+    right: 0 !important;
+    text-decoration: none !important;
+    top: 0 !important;
+    z-index: 1 !important;
+}
+
+.github-corner svg {
+    color: #FFFFFF !important;
+    fill: #2980B9 !important;
+}
+/*====================================*/
+
+
+/*---[ Tabs ]-------------------------*/
+.md-tabs .md-tabs-content {
+    margin-bottom: -1em;
+}
+
+.md-button.md-focused:before,
+.md-button:active:before,
+.md-button:hover:before {
+    background-color: #2980B9;
+    opacity: .12;
+}
+
+.md-tabs.md-theme-default .md-tabs-navigation .md-button.md-active {
+    color: #2980B9;
+}
+
+.md-tabs-indicator {
+    background-color: #2980B9;
+}
+
+.md-ripple .md-ripple-wave {
+    background-color: #2980B9;
+}
+
+/* Code Blocks */
+.md-tabs pre:not(:first-of-type) {
+    margin-top: 1em;
+}
+
+.md-tabs pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.markdown-section pre {
+    margin: 0 !important;
+    padding: 1.5em !important;
+}
+
+.markdown-section pre:not(:first-child) {
+    margin-top: 1em !important;
+}
+
+pre:after {
+    font-size: 0.8em !important;
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.markdown-section code {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+blockquote pre {
+    border: 1px solid #F0B794 !important;
+}
+/*====================================*/
+
+
+/*---[ Markdown ]---------------------*/
+p.warn, p.tip, blockquote {
+    position: relative !important;
+}
+
+p.warn:before,
+p.tip:before,
+blockquote:before {
+    border-radius: 100% !important;
+    font-family: Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    left: -12px !important;
+    line-height: 20px !important;
+    position: absolute !important;
+    height: 20px !important;
+    width: 20px !important;
+    text-align: center !important;
+    top: 17px !important;
+}
+
+.markdown-section p.warn {
+    background-color: transparent;
+    border: 1px solid #E9692F;
+    padding: 1.5rem 1rem;
+}
+
+.markdown-section p.tip {
+    background-color: #F8F8F8;
+    border-left: 3px solid #FF6666;
+    padding: 1.5rem 1rem !important;
+}
+
+.markdown-section p.tip:before {
+    top: 27px !important;
+}
+
+.markdown-section blockquote {
+    padding: 1rem !important;
+    background-color: #F8F8F8;
+}
+
+.markdown-section blockquote > p {
+    margin: 0 !important;
+    font-weight: normal !important;
+    color: #34495E !important;
+}
+
+.markdown-section p > code {
+    background-color: transparent !important;
+    font-size: 0.85em !important;
+}
+
+.markdown-section p.warn > code {
+    color: #F54D4D !important;
+}
+/*====================================*/
+
+
+/*---[ Attributes ]-------------------*/
+code .token.annotation {
+    color: #2980B9;
+}
+
+.transform-arrow {
+    display: block;
+    width: 1em;
+    margin: -0.3em auto;
+    color: #2980B9;
+}
+/*====================================*/
+
+
+/*---[ API ]--------------------------*/
+.api-container h2 {
+    margin-top: 0.5em;
+}
+
+.api-container h2 a {
+    text-decoration: none;
+}
+
+.api-container h2 a span {
+    font-size: 1rem;
+    font-family: Roboto Mono,Monaco,courier,monospace;
+    font-weight: lighter;
+    margin-left: 1.2em;
+}
+
+.api-container h2 a span:before {
+    content: "#";
+    color: #2980B9;
+    position: absolute;
+    left: 1em;
+    margin-top: 0.25em;
+    font-size: 1em;
+}
+
+.api-container hr {
+    margin: 5px 0;
+}
+
+.api-container ul {
+    list-style-type: none;
+}
+
+.api-container li p:first-child {
+    margin-bottom: 0.3em;
+}
+
+.api-container li p:nth-child(2) {
+    margin-top: 0.3em;
+}
+/*====================================*/
+
+
+/*---[ Team ]-------------------------*/
+.member {
+    display: flex;
+    margin-top: 2em;
+}
+
+.member .avatar {
+    flex: 0 0 80px;
+}
+
+.member .avatar .md-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.member .profile {
+    padding-left: 26px;
+    flex: 1;
+}
+
+.member .profile h3 {
+    margin-top: 0;
+}
+
+.member .profile dl {
+    margin-top: 0.6em;
+}
+
+.member .profile dt {
+    font-size: 0.84em;
+}
+
+.member .profile dt,
+.member .profile dd {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.member .profile dt::after {
+    content: "";
+    margin-right: 7px;
+}
+
+.member .profile dd::after {
+    display: block;
+    content: " ";
+}
+
+.member .profile dt i {
+    width: 14px;
+    text-align: center;
+}
+
+.member .profile dt i.fa-map-marker {
+    font-size: 1.15em;
+}
+
+.member footer {
+    margin-top: 0.5em;
+}
+
+.member footer a:not(:first-child) {
+    margin-left: 5px;
+}
+
+.fa-github {
+    color: #2C3E50;
+}
+
+.fa-twitter {
+    color: #1DA1F3;
+}
+
+.fa-google {
+    color: #4285f4;
+}
+
+.team-header-gap {
+    height: 1px;
+}
+/*====================================*/
+
+
+/*---[ Gallery ]----------------------*/
+.gallery-entry {
+    display: flex;
+    margin-top: 3em;
+}
+
+.gallery-entry .image {
+    flex: 0 0 100px;
+    height: 100px;
+    border-radius: 1000px;
+    overflow: hidden;
+    border: 5px solid white;
+
+    box-shadow:
+    0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-entry .image:hover {
+    box-shadow:
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-entry .image img {
+    width: 90px;
+    height: 90px;
+}
+
+.gallery-entry .at {
+    font-weight: 100;
+    color: #7A8796;
+}
+
+.gallery-entry .description {
+    padding-left: 26px;
+    padding-top: 0.3em;
+    flex: 1;
+}
+
+.gallery-entry .description h3 {
+    margin-top: 0;
+}
+/*====================================*/
+
+
+/*---[ Publications ]-----------------*/
+.authors {
+    margin-top: -0.9em;
+    font-style: italic;
+}
+
+.authors a {
+    font-weight: 400;
+}
+/*====================================*/
+
+
+/*---[ Print ]------------------------*/
+@media print {
+    .sidebar {
+        display: none,
+    }
+    .content {
+        left: 0;
+    }
+}
+/*====================================*/

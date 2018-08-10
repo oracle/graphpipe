@@ -1,6 +1,8 @@
 # Specification
 
-## 1. Introduction The GraphPipe specification describes a transport protocol
+## 1. Introduction
+
+The GraphPipe specification describes a transport protocol
 used to exchange information between a client and a model inference server.  A
 GraphPipe-compatible client can use this protocol to send model inference
 requests to a GraphPipe-compatible server, which can then send inference
