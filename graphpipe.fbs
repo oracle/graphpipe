@@ -35,10 +35,14 @@ table Tensor {
 }
 
 /*
-  Req definition, which containes either an InferRequest or a MetadataRequest
+  Req definition, which is a union of an InferRequest and a a MetadataRequest.
 */
 union Req {InferRequest, MetadataRequest}
 
+/*
+  Request definition, which is a container for one of the two allowed request types.
+  req: a union representing an InferRequest or a MetadataRequest.
+*/
 table Request {
     req:Req;
 }
@@ -46,15 +50,15 @@ table Request {
 /*
   Infer Request definition, which is used to request data from a remote model.
   config: application-specific string used for request-specific model configuration.
-  input_names: A list of input names
-  input_tensors: A list of input tensors, associated with input_names
-  output_names: A list of outputs to return in response to the provided inputs
+  input_names: a list of input names
+  input_tensors: a list of input tensors, associated with input_names
+  output_names: a list of outputs to return in response to the provided inputs
 */
 table InferRequest {
-    config:string;
-    input_names:[string];
+    config:string; // optional
+    input_names:[string]; // optional
     input_tensors:[Tensor];
-    output_names:[string];
+    output_names:[string]; // optional
 }
 
 /*
@@ -68,7 +72,8 @@ table Error {
 }
 
 /*
-  InferResponse definition.
+  InferResponse definition. Should contain either a list of tensors or a list
+  of errors, but not both.
   output_tensors: a list of output_tensors, in the order requested by InferRequest.output_names
   errors: A list of errors that occurred during processing, if any
 */
@@ -97,19 +102,19 @@ table IOMetadata {
 }
 
 /*
-  MetadataResponse definition.  Describes characteristics of a graphpipe model server.
+  MetadataResponse definition.  Describes characteristics of the server and the model being served.
   name: name of the model being served
-  version: the version of the server
-  server: Name of the server
+  version: version of the server
+  server: name of the server
   description: description of the model being served
   inputs: metadata about the model's inputs
   outputs: metadata about the model's outputs
 */
 table MetadataResponse {
-    name:string;
-    version:string;
-    server:string;
-    description:string;
+    name:string; // optional
+    version:string; // optional
+    server:string; // optional
+    description:string; //optional
     inputs:[IOMetadata]; // required
     outputs:[IOMetadata]; // required
 }
