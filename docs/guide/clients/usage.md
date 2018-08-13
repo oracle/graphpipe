@@ -48,7 +48,17 @@ Make a request against the model:
 - java
 
     ```java
-    ... coming soon!
+    package com.oracle.graphpipe;
+    import java.io.IOException;
+
+    public class Main {
+        public static void main(String[] args) throws IOException {
+            NativeTensor request = NativeTensor.fromArray(
+                    new float[][][]{{{1, 2, 3}, {4, 5, 6}}});
+            NativeTensor result = Remote.Execute("http://127.0.0.1:9000", request);
+            System.out.println(result.toINDArray());
+        }
+    }
     ```
 
 :::
