@@ -16,9 +16,9 @@ Make a request against the model:
     ```python
     from graphpipe import remote
     import numpy as np
-    data = np.array([[0.0, 1.0], [2.0, 3.0]])
-    out = remote.execute("http://127.0.0.1:9000", data)
-    print(out)
+    request = np.array([[0.0, 1.0], [2.0, 3.0]])
+    result = remote.execute("http://127.0.0.1:9000", request)
+    print(result)
 
     ```
 
