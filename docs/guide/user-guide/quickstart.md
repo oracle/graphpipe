@@ -1,5 +1,5 @@
 # Getting Started
-To launch a simple graphpipe model server that is serving squeezenet on CPU:
+Launch a simple GraphPipe model server that is serving squeezenet on CPU:
 
 ```bash
   docker run -it --rm \

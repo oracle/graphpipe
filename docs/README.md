@@ -6,17 +6,18 @@
 
 # GraphPipe
 
-> A Standardized, Efficient protocol for Dead Simple ML Model Serving
+> Dead Simple Machine Learning Model Serving via a Standard Protocol
 
 # What is it?
+
 GraphPipe is a protocol and collection of software designed to
 simplify machine learning model deployment and decouple it from
 vendor-specific model implementations.
 
 # Features
-* A simple, minimalist specification based on Flatbuffers
-* Simple, reference model servers for Tensorflow, Caffe2, and ONNX.  More
-  implementations to come.
+
+* A minimalist specification based on Flatbuffers
+* Simple, reference model servers for Tensorflow, Caffe2, and ONNX.
 * Efficient client implementations in Go, Python, and Java.
 
 ### Quick Navigation

@@ -13,7 +13,10 @@
 - golang
 
     ```bash
-    ADD INSTALL
+    go get github.com/oracle/graphpipe-go
+    cd $GOPATH/src/github.com/oracle/graphpipe-go
+    make install-govendor
+    make deps
     ```
 
 - java
