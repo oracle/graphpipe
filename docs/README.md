@@ -21,8 +21,8 @@ vendor-specific model implementations.
 
 ### Quick Navigation
 
-- [Getting started](/guide/user-guide/introduction)
-- [Running a GraphPipe server](/servers/)
-- [Using Graphpipe Clients](/clients/)
-- [Performance](/performance/)
-- [About](/about.md)
+- [Getting Started](/guide/user-guide/quickstart)
+- [GraphPipe Specification](/guide/user-guide/spec)
+- [Performance Measurements](/guide/user-guide/performance)
+- [Running a GraphPipe Server](/guide/servers/overview)
+- [Using Graphpipe Clients](/guide/clients/overview)

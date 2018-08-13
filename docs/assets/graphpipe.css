@@ -57,6 +57,7 @@ a:not(.md-button):hover {
 
 .app-nav > ul {
     padding-left: 0px !important;
+    margin-right: 50px;
 }
 
 .app-nav > ul > li > a {
