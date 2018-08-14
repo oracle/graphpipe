@@ -11,7 +11,7 @@ docker run -it --rm \
     -e https_proxy=${https_proxy} \
     -p 9000:9000 \
     sleepsonthefloor/graphpipe-tf:cpu \
-    --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb \
+    --model=https://oracle.github.io/graphpipe/models/squeezenet.pb \
     --listen=0.0.0.0:9000
 ```
 

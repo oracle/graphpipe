@@ -21,7 +21,7 @@ simple tool to convert your keras .h5 model into GraphDef .pb format. It has
 been packaged into a docker container, which you can use like this:
 
 ```bash
-curl https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.h5 > squeezenet.h5
+curl https://oracle.github.io/graphpipe/models/squeezenet.h5 > squeezenet.h5
 docker run -v $PWD:/tmp/ sleepsonthefloor/graphpipe-h5topb:latest squeezenet.h5 converted_squeezenet.pb
 ```
 

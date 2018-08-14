@@ -14,7 +14,7 @@ model that is accessible from a remote url:
 docker run -it --rm \
       -p 9000:9000 \
       sleepsonthefloor/graphpipe-tf:cpu \
-      --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb \
+      --model=https://oracle.github.io/graphpipe/models/squeezenet.pb \
       --listen=0.0.0.0:9000
 ```
 
@@ -23,7 +23,7 @@ will need to use a volume mount in order to serve local models.  Here is an
 example of serving a local .pb model:
 
 ```bash
-curl https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb > squeezenet.pb
+curl https://oracle.github.io/graphpipe/models/squeezenet.pb > squeezenet.pb
 docker run -it --rm \
         -v "$PWD:/models/"  \
         -p 9000:9000 \
@@ -43,7 +43,7 @@ docker run -it --rm \
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           sleepsonthefloor/graphpipe-tf:cpu \
-          --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb \
+          --model=https://oracle.github.io/graphpipe/models/squeezenet.pb \
           --listen=0.0.0.0:9000
     ```
 
@@ -54,8 +54,8 @@ docker run -it --rm \
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           sleepsonthefloor/graphpipe-onnx:cpu \
-          --value-inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs.json \
-          --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.onnx \
+          --value-inputs=https://oracle.github.io/graphpipe/models/squeezenet.value_inputs.json \
+          --model=https://oracle.github.io/graphpipe/models/squeezenet.onnx \
           --listen=0.0.0.0:9000
     ```
 
@@ -66,9 +66,9 @@ docker run -it --rm \
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           graphpipe-onnx:cpu \
-          --value-inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs_caffe2.json \
-          --init-net=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.init_net.pb \
-          --predict-net=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.predict_net.pb \
+          --value-inputs=https://oracle.github.io/graphpipe/models/squeezenet.value_inputs_caffe2.json \
+          --init-net=https://oracle.github.io/graphpipe/models/squeezenet.init_net.pb \
+          --predict-net=https://oracle.github.io/graphpipe/models/squeezenet.predict_net.pb \
           --listen=0.0.0.0:9000
     ```
 
@@ -89,7 +89,7 @@ cuda-9.0+cudnn7.
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           sleepsonthefloor/graphpipe-tf:gpu \
-          --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.pb \
+          --model=https://oracle.github.io/graphpipe/models/squeezenet.pb \
           --listen=0.0.0.0:9000
     ```
 
@@ -99,8 +99,8 @@ cuda-9.0+cudnn7.
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           sleepsonthefloor/graphpipe-onnx:gpu \
-          --value-inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs.json \
-          --model=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.onnx \
+          --value-inputs=https://oracle.github.io/graphpipe/models/squeezenet.value_inputs.json \
+          --model=https://oracle.github.io/graphpipe/models/squeezenet.onnx \
           --listen=0.0.0.0:9000
     ```
 
@@ -110,9 +110,9 @@ cuda-9.0+cudnn7.
           -e https_proxy=${https_proxy} \
           -p 9000:9000 \
           sleepsonthefloor/graphpipe-onnx:gpu \
-          --value-inputs=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.value_inputs_caffe2.json \
-          --init-net=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.init_net.pb \
-          --predict-net=https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcskeppareuser/b/c4/o/squeezenet.predict_net.pb \
+          --value-inputs=https://oracle.github.io/graphpipe/models/squeezenet.value_inputs_caffe2.json \
+          --init-net=https://oracle.github.io/graphpipe/models/squeezenet.init_net.pb \
+          --predict-net=https://oracle.github.io/graphpipe/models/squeezenet.predict_net.pb \
           --listen=0.0.0.0:9000
     ```
 
