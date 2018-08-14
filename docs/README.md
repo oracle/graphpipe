@@ -1,12 +1,16 @@
 <img
     src="./assets/logo.png"
     width="500"
-    style="display: block; width: 500px; margin: auto; margin-bottom: 3em"
+    style="display: block; width: 500px; margin: auto;"
 />
 
-# GraphPipe
+<div style="text-align: center">__Dead Simple ML Model Serving via a Standard Protocol__</div>
 
-> Dead Simple ML Model Serving via a Standard Protocol
+<img
+    src="./assets/arch-sm.jpg"
+    width="512"
+    style="display: block; width: 512px; margin: auto;"
+/>
 
 # What is it?
 
@@ -34,6 +38,7 @@ friendlier place.  See more about why we built it
 [Tensorflow]: https://www.tensorflow.org
 [Caffe2]: https://caffe2.ai
 [ONNX]: https://onnx.ai
+
 
 ### Quick Navigation
 
