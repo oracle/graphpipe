@@ -37,9 +37,9 @@ friendlier place.  See more about why we built it
 
 ### Quick Navigation
 
-- [Project Overview](guide/user-guide/overview)
-- [Getting Started](/guide/user-guide/quickstart)
-- [GraphPipe Specification](/guide/user-guide/spec)
-- [Performance Measurements](/guide/user-guide/performance)
-- [Running a GraphPipe Server](/guide/servers/overview)
-- [Using GraphPipe Clients](/guide/clients/overview)
+- [Project Overview](guide/user-guide/overview.md)
+- [Getting Started](guide/user-guide/quickstart.md)
+- [GraphPipe Specification](guide/user-guide/spec.md)
+- [Performance Measurements](guide/user-guide/performance.md)
+- [Running a GraphPipe Server](guide/servers/overview.md)
+- [Using GraphPipe Clients](guide/clients/overview.md)

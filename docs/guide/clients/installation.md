@@ -76,5 +76,5 @@ languages to support next!
 :::
 
 Once you've installed your client, continue to the 
-[next section](/guide/clients/usage) to see an example of how 
+[next section](guide/clients/usage.md) to see an example of how 
 to make a basic request.
