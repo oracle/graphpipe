@@ -1,5 +1,22 @@
 # Getting Involved
 
+## Repositories
+
+The GraphPipe code is divided into a few different projects:
+
+ * [graphpipe](https://github.com/oracle/graphpipe) contains the flatbuffer
+   spec and the documentation.
+ * [graphpipe-go](https://github.com/oracle/graphpipe-go) contains go client
+   and server code, as well as the reference servers.
+ * [graphpipe-py](https://github.com/oracle/graphpipe-py) contains python
+   client and server code.
+ * [graphpipe-tf-py](https://github.com/oracle/graphpipe-tf-py) contains a
+   GraphPipe remote operation for TensorFlow as well as some example code.
+ * [graphpipe-java](https://github.com/oracle/graphpipe-java) __(COMING SOON)__
+   contains the java client library.
+
+## Contributing
+
 All of the GraphPipe projects are dual licensed under [UPL] and [Apache2]. We
 welcome contributions. Pull requests can be made on github under the [Oracle
 Contributor Agreement] (OCA). If you find any bugs or have feature requests,
