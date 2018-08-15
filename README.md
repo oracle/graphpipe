@@ -69,3 +69,4 @@ respectively.
 All of the GraphPipe projects are open source. To find out how to contribute
 see [CONTRIBUTING.md](CONTRIBUTING.md)
 
+You can also chat us up on our [Slack Channel](https://join.slack.com/t/graphpipe/shared_invite/enQtNDE4MTUyODk2NzQzLTUwODlkZDRiYTI4NmE1OTA5NzRmNjk5MGZiY2M0ZDRiYzNiMTQ0ZmIxODYzZjY2NzRmNzM4NTI0OGVlZGYzZTA).

@@ -15,6 +15,10 @@ The GraphPipe code is divided into a few different projects:
  * [graphpipe-java](https://github.com/oracle/graphpipe-java) __(COMING SOON)__
    contains the java client library.
 
+If you have a question or issue related to the code or one of our projects,
+please send us an issue in the relevant repo, or talk to us on our [Slack
+Channel](https://join.slack.com/t/graphpipe/shared_invite/enQtNDE4MTUyODk2NzQzLTUwODlkZDRiYTI4NmE1OTA5NzRmNjk5MGZiY2M0ZDRiYzNiMTQ0ZmIxODYzZjY2NzRmNzM4NTI0OGVlZGYzZTA).
+
 ## Contributing
 
 All of the GraphPipe projects are dual licensed under [UPL] and [Apache2]. We
