@@ -29,7 +29,7 @@ pip install pillow # needed for image manipulation
 ```
 
 Finally, let's test an image against the model. Right click and download the
-[following image](http://oracle.github.io/graphpipe/guide/user-guide/_media/mug227.png):
+[following image](https://oracle.github.io/graphpipe/guide/user-guide/_media/mug227.png):
 
 ![image](_media/mug227.png)
 
