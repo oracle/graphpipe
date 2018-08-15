@@ -6,4 +6,4 @@
   - [Spec](/guide/user-guide/spec)
   - [Performance](/guide/user-guide/performance)
   - [Serving Models](/guide/servers/overview)
-  - [Using Graphpipe Clients](/guide/clients/overview)
+  - [Using GraphPipe Clients](/guide/clients/overview)

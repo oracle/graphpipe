@@ -13,7 +13,7 @@
   - [`graphpipe-tf` Reference](/guide/servers/graphpipe-tf)
   - [`graphpipe-onnx` Reference](/guide/servers/graphpipe-onnx)
 
-- [**Using Graphpipe Clients**](/guide/clients/overview.md)
+- [**Using GraphPipe Clients**](/guide/clients/overview.md)
   - [Overview](/guide/clients/overview.md)
   - [Installation](/guide/clients/installation.md)
   - [Usage](/guide/clients/usage)

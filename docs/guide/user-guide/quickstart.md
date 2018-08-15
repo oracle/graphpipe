@@ -24,7 +24,7 @@ curl localhost:9000
 To make a request, install the python client and dependencies:
 
 ```bash
-pip install git+https://github.com/oracle/graphpipe-py
+pip install graphpipe
 pip install pillow # needed for image manipulation
 ```
 

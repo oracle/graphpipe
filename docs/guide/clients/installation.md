@@ -13,9 +13,7 @@ languages to support next!
 - python
 
     ```bash
-    git clone https://github.com/oracle/graphpipe-py
-    cd graphpipe-py
-    python setup.py install
+    pip install graphpipe
     ```
 
 - go
