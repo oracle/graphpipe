@@ -17,7 +17,7 @@ repository:
 
 ## Goals
 
-In designing the model servers we had the following goals:
+In designing the model servers we aimed to achieve the following:
 
 * Excellent performance
 * Simple, documented build process
@@ -25,15 +25,14 @@ In designing the model servers we had the following goals:
 * Support for the most common ML Frameworks
 * Optimized cpu and gpu support
 
-## Basic server functionality
+## Overview of server functionality
 The basic mechanics of what our reference servers do is fairly straightforward.
 
 ![image](_media/server_flow.png)
 
-In order to minimize overhead, we have attempted to make the transitions between
-the illustrated steps as efficient as possible.  For example, because of our
-choice of using flatbuffers as a network transport format, de-serialization is
-effectively a pointer cast.
+In order to minimize overhead, we have attempted to make the the illustrated
+steps as efficient as possible.  For example, because we use flatbuffers as a
+network transport format, de-serialization is effectively a pointer cast.
 
 ## Language Choice
 
@@ -45,9 +44,9 @@ qualities make it an ideal choice for GraphPipe's model servers.
 The one drawback of go is that because existing ML Frameworks are written
 in C/C++, there is a slight overhead when context switching from go code into
 the framework backend. In practice, however, we have seen very little
-real-world performance impact.  In performance testing, our go code achieved
-virtually the same performance as an optimized build of tensorflow-serving,
-which is written in C++ and avoids this overhead.
+real-world performance impact due to this.  During performance testing, our go
+code achieved virtually the same performance as an optimized build of
+tensorflow-serving, which is written in pure C++.
 
 ## CUDA GPU Acceleration
 For each of our reference servers, we provide docker images and source code for

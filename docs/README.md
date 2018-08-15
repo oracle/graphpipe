@@ -18,8 +18,10 @@ GraphPipe is a protocol and collection of software designed to simplify machine
 learning model deployment and decouple it from vendor-specific model
 implementations.
 
-The existing solutions for model serving are inconsistent and/or inefficient.
-There is no consistent protocol for communicating with these model servers so
+# Why did we make it?
+
+We found existing solutions for model serving to be inconsistent and/or inefficient.
+Without a consistent protocol for communicating with different model servers, 
 it is often necessary to build custom clients for each workload. GraphPipe
 solves these problems by standardizing on an efficient communication protocol
 and providing simple model servers for the major ML frameworks.
