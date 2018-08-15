@@ -15,7 +15,7 @@
 # What is it?
 
 GraphPipe is a protocol and collection of software designed to simplify machine
-learning model deployment and decouple it from vendor-specific model
+learning model deployment and decouple it from framework-specific model
 implementations.
 
 # Why did we make it?
