@@ -30,7 +30,7 @@ The basic mechanics of what our reference servers do is fairly straightforward.
 
 ![image](_media/server_flow.png)
 
-In order to minimize overhead, we have attempted to make the the illustrated
+In order to minimize overhead, we have attempted to make the above illustrated
 steps as efficient as possible.  For example, because we use flatbuffers as a
 network transport format, de-serialization is effectively a pointer cast.
 
@@ -56,12 +56,12 @@ building binaries optimized to run with CUDA acceleration.
 In order to provide maximize compatibility between our various server builds, and
 also to maximize performance, the CPU builds of our servers are compiled with
 [MKL](https://software.intel.com/en-us/mkl).  When using Tensorflow, MKL
-provides the added benefit of supporting channels_first image ordering for
+provides the added benefit of supporting channels_first dimension ordering for
 convolutional operations, which is generally the preferred ordering when using GPU.
 Thus, when using the default configurations of GraphPipe servers, CPU and GPU
 versions can serve the same models and accept the same inputs.
 
-Of course, it could be that your specific use requires different optimizations
+Of course, it could be that your application requires different optimizations
 or channel ordering; if this is the case, it should be straightforward to tweak
 the source code to build a custom version for your needs.
 
