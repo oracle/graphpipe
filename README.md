@@ -6,7 +6,7 @@
 
 # GraphPipe
 
-> Dead Simple ML Model Serving via a Standard Protocol
+> Machine Learning Model Deployment Made Simple
 
 # What is it?
 
