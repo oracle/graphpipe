@@ -4,7 +4,7 @@
     style="display: block; width: 500px; margin: auto;"
 />
 
-<div style="text-align: center">__Dead Simple ML Model Serving via a Standard Protocol__</div>
+<div style="text-align: center">__Machine Learning Model Deployment Made Simple__</div>
 
 <img
     src="./assets/arch-sm.jpg"
