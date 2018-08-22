@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
     <link rel="stylesheet" href="assets/vue-material.min.css">
     <link rel="stylesheet" href="assets/vue.css">
-    <link rel="stylesheet" href="assets/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/graphpipe.css">
+    <link rel="stylesheet" href="assets/toaster-js.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
   </head>
   <body class="no-sidebar">
@@ -96,8 +97,30 @@
     <script src="assets/prism-java.min.js"></script>
     <script src="assets/prism-latex.min.js"></script>
     <script src="assets/prism-python.min.js"></script>
+    <script src="assets/toaster-js.js"></script>
     <script>
       document.write('<scr' + 'ipt src="//unpkg.com/docsify/lib/plugins/ga.min.js"></scr' + 'ipt>');
+    </script>
+    <script>
+      var element = document.createElement("div")
+      var link = document.createElement("a")
+      link.href = "https://join.slack.com/t/graphpipe/shared_invite/enQtNDE4MTUyODk2NzQzLTUwODlkZDRiYTI4NmE1OTA5NzRmNjk5MGZiY2M0ZDRiYzNiMTQ0ZmIxODYzZjY2NzRmNzM4NTI0OGVlZGYzZTA"
+      link.target = "_blank"
+      var littleCross = document.createElement("i")
+      littleCross.className = "fas fa-times little-cross"
+      var chat = document.createElement("i")
+      chat.className = "fas fa-comments"
+
+      link.textContent = " Questions? Visit us on Slack"
+      element.appendChild(littleCross)
+      element.appendChild(chat)
+      element.appendChild(link)
+
+      var toast = new Toast(element,
+                            Toast.TYPE_ERROR,
+                            10000);
+
+      littleCross.addEventListener("click", function () { toast.delete() })
     </script>
   </body>
 </html>

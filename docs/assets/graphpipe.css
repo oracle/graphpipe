@@ -477,3 +477,7 @@ code .token.annotation {
     }
 }
 /*====================================*/
+
+.app-nav ul li p {
+    cursor: pointer;
+}
