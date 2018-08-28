@@ -45,7 +45,7 @@ you can make a request against the model using the following languages:
     func main() {
       uri := "http://127.0.0.1:9000"
       request := [][]float32{{0.0, 1.0}, {2.0, 3.0}}
-      result, err := graphpipe.Remote(http.DefaultClient, uri, request, "", "")
+      result, err := graphpipe.Remote(uri, request)
       if err != nil {
         panic(err)
       }
